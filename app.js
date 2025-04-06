@@ -1,23 +1,49 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React Element
-const Title = (
-  <h1 className="head" tabIndex="5">
-    Namste React using JSX 🚀
-  </h1>
-);
+/**
+ * Header
+ *  -Logo
+ *  -NavItems
+ * Body
+ *  -Search
+ *  -RestrauntContainer
+ *    -RestrauntCard
+ * Footer
+ *  -CopyRight
+ *  -Links
+ *  -Address
+ *  -Contact
+ */
 
-const number = 10000;
-
-const HeadingComponent = () => (
-  <div id="container">
-    {Title}
-    <h2>{10 + 1}</h2>
-    <h1 className="heading"> Namste React Functional Component</h1>
-  </div>
-);
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="logo-container">
+        <img
+          className="logo"
+          src="https://dcassetcdn.com/design_img/1442230/51618/51618_7323624_1442230_c91dc92a_image.jpg"
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact US</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);
