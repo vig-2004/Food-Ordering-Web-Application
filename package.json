@@ -1,0 +1,29 @@
+{
+  "name": "reactscript",
+  "version": "1.0.0",
+  "description": "this is namasthe react by vignesh",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vig-2004/react.git"
+  },
+  "keywords": [],
+  "author": "vignesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vig-2004/react/issues"
+  },
+  "homepage": "https://github.com/vig-2004/react#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "browserslist":[
+    "Last 2 version"
+  ]
+}
