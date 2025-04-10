@@ -4,7 +4,7 @@
   "description": "this is namasthe react by vignesh",
   "scripts": {
     "start": "parcel index.html",
-    "build":"parcel build index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -19,13 +19,16 @@
   },
   "homepage": "https://github.com/vig-2004/react#readme",
   "devDependencies": {
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.2",
     "parcel": "^2.14.4"
   },
   "dependencies": {
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.5.0"
   },
-  "browserslist":[
+  "browserslist": [
     "Last 2 version"
   ]
 }

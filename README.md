@@ -52,3 +52,8 @@ Two types of Export/Import
 -useEffect()
 
 Whenever the state variable updates react will rerender the components
+
+# 2 Types of Routing in web apps
+
+    -Client side Routing
+    -Server side Routing
