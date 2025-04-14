@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
@@ -7,8 +8,17 @@ import Error from "./components/Error";
 import About from "./components/About";
 import RestaurantMenu from "./components/RestaruantMenu";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-
 import RestaurantMenu from "./components/RestaruantMenu";
+// import Grocery from "./components/Grocery";
+
+// Chunking
+// Code Splitting
+// Dynamic Bundling
+// Lazy Loading
+// Ondemand Loading
+//dynamic import
+
+const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
   return (
@@ -35,6 +45,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/grocery",
+        element: (
+          <Suspense fallback={<h1>this is grocery</h1>}>
+            <Grocery />
+          </Suspense>
+        ),
       },
       {
         path: "/restaurants/:resId",
