@@ -17,13 +17,13 @@ class Userclass extends React.Component {
     this.setState({
       userInfo: json,
     });
-    console.log(json);
+    // console.log(json);
   }
   componentDidUpdate() {
-    console.log("component updated");
+    // console.log("component updated");
   }
   componentWillUnmount() {
-    console.log("component will unmount");
+    // console.log("component will unmount");
   }
   render() {
     const { name, location, avatar_url } = this.state.userInfo;

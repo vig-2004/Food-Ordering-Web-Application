@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
@@ -9,6 +9,8 @@ import About from "./components/About";
 import RestaurantMenu from "./components/RestaruantMenu";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import RestaurantMenu from "./components/RestaruantMenu";
+import UserContext from "./utils/UserContext";
+import { useState } from "react";
 // import Grocery from "./components/Grocery";
 
 // Chunking
@@ -21,11 +23,22 @@ import RestaurantMenu from "./components/RestaruantMenu";
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    const data = {
+      name: "viggie",
+    };
+    setUserName(data.name);
+  }, []);
+
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
+    <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+      <div className="app">
+        <Header />
+        <Outlet />
+      </div>
+    </UserContext.Provider>
   );
 };
 
