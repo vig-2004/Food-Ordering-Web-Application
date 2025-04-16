@@ -57,3 +57,21 @@ Whenever the state variable updates react will rerender the components
 
     -Client side Routing
     -Server side Routing
+
+# Lazy Loading
+
+    - Chunking
+    - Code Splitting
+    - Dynamic Bundling
+    - Lazy Loading
+    - Ondemand Loading
+    - dynamic import
+
+# Redux Toolkits
+
+    - Install @reduxjs/toolkit and react-redux
+    - Build our store
+    - Connect our store to our app
+    - Slice (cartSlice)
+    - dispatch(action)
+    - Selector
