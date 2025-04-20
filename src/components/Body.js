@@ -12,7 +12,7 @@ const Body = () => {
 
   const RestaurantCardwithDiscount = withDiscountOffer(RestaurntCard);
 
-  console.log(ListOfRestruants);
+  // console.log(ListOfRestruants);
   // useeffect will be called when it renders
 
   useEffect(() => {
@@ -43,9 +43,11 @@ const Body = () => {
 
   const { loggedInUser, setUserName } = useContext(UserContext);
 
-  return ListOfRestruants.length === 0 ? (
-    <Shimmer />
-  ) : (
+  if (ListOfRestruants.length === 0) {
+    return <Shimmer />;
+  }
+
+  return (
     <div className="body">
       <div className="filter flex">
         <div className="search m-4 p-4">
@@ -83,9 +85,9 @@ const Body = () => {
           </button>
         </div>
         <div className="search m-4 p-4 flex items-center">
-          <label>UserName : </label>
+          <label>UserName : </label>&nbsp;
           <input
-            className="border border-black p-2"
+            className="border border-black p-2 mx-2"
             value={loggedInUser}
             onChange={(e) => setUserName(e.target.value)}
           />
