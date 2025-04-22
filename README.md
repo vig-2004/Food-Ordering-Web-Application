@@ -75,3 +75,22 @@ Whenever the state variable updates react will rerender the components
     - Slice (cartSlice)
     - dispatch(action)
     - Selector
+
+# Types of testing (developer)
+
+    - Unit Testing
+    - Integration Testing
+    - End to End testing - e2e testing
+
+# Setting up Testing in our app
+
+- Installed react Testing Library
+- Installed jest
+- Installed Babel dependencies
+- Configure Babel
+- Configure Parcel Config file to disable default babel transpilation (goto babel->js->babel->Usage with other tools)
+- Jest - npx jest --init
+- Install jsdom library (from testing liberary->getstarted->frameworks->react testing library->setup->jest-28->npm install --save-dev jest-environment-jsdom)
+- Install @babel/preset-react - to make JSX work in test cases
+- Include @babel/preset-react inside my babel config
+- Install npm i -D @testing-library/jest-dom
