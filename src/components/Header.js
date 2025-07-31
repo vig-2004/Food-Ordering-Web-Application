@@ -13,14 +13,14 @@ const Header = () => {
   //Subscribing to the store using a Selector
 
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
+  // console.log(cartItems);
   return (
-    <div className="flex justify-between bg-pink-200 shadow-lg sm:bg-yellow-200 lg:bg-green-200">
+    <div className="flex bg-pink-200 shadow-lg sm:bg-yellow-200 lg:bg-green-200">
       <div className="logo-container">
         <img className="w-56 sticky" src={LOGO_URL} />
       </div>
-      <div className="flex items-center">
-        <ul className="flex m-4 ">
+      <div className="flex items-center ml-20 ">
+        <ul className="flex m-4">
           <li className="px-4 font-bold text-xl">
             Online Status : {onlineStatus ? "✅" : "🔴"}
           </li>

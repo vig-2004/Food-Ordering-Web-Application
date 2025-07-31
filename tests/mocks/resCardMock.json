@@ -1,0 +1,14 @@
+{
+    "info": {
+      "cloudinaryImageId": "sample-image-id",
+      "name": "McDonald's",
+      "avgRating": 4.5,
+      "cuisines": ["Fast Food", "Burgers"],
+      "costForTwo": "$20",
+      "sla": { "slastring": "30 mins" },
+      "aggregatedDiscountInfoV3": {
+        "header": "20% Off",
+        "subHeader": "on all orders"
+      }
+    }
+  }

@@ -1,13 +1,16 @@
 import { useContext } from "react";
 import { CDN_URL } from "../utils/constants";
 import UserContext from "../utils/UserContext";
+
 const RestaurntCard = (props) => {
   const { resData } = props;
+  // console.log(resData);
   const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, sla } =
     resData.info;
   const { loggedInUser } = useContext(UserContext);
+
   return (
-    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200">
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-200 shadow-lg ">
       <img
         className="rounded-lg"
         alt="res-logo"
@@ -30,6 +33,7 @@ export const withDiscountOffer = (RestaurntCard) => {
       <div className="relative">
         {discountInfo && (
           <div className="absolute top-0 left-0 bg-red-500 text-white p-2 rounded-lg">
+            <h4 className="text-xs">Discount Available</h4>
             {`${discountInfo.header} ${discountInfo.subHeader}`}
           </div>
         )}

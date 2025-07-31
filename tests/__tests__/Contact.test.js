@@ -1,4 +1,4 @@
-import Contact from "../Contact";
+import Contact from "../../src/components/Contact";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 

@@ -48,8 +48,8 @@ const Body = () => {
   }
 
   return (
-    <div className="body">
-      <div className="filter flex">
+    <div className="body m-5 p-5">
+      <div className="filter flex justify-around m-4 p-4">
         <div className="search m-4 p-4">
           <input
             type="text"
